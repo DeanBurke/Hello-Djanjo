@@ -29,8 +29,6 @@ import dj_database_url
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-development = os.environ.get('DEVELOPMENT', False)
-
 DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = ['localhost', '8000-deanburke-hellodjanjo-bhqkqyz1588.ws-eu101.gitpod.io', os.environ.get('HEROKU_HOSTNAME')]
@@ -81,6 +79,8 @@ WSGI_APPLICATION = 'django_todo.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
+
+development = os.environ.get('DEVELOPMENT', False) 
 
 if development:
     DATABASES = {
