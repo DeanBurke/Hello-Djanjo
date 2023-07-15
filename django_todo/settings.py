@@ -28,9 +28,9 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 import dj_database_url
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEVELOPMENT' in os.environ
+DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', os.environ.get('db1993-django-todo-app-282300a89d4b.herokuapp.com')]
+ALLOWED_HOSTS = ['db1993-django-todo-app-282300a89d4b.herokuapp.com']
 
 
 # Application definition
