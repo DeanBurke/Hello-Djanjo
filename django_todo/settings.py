@@ -31,7 +31,7 @@ import dj_database_url
 
 DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['localhost', os.environ.get('HEROKU_HOSTNAME')]
+ALLOWED_HOSTS = ['8000-deanburke-hellodjanjo-bhqkqyz1588.ws-eu101.gitpod.io', os.environ.get('HEROKU_HOSTNAME')]
 
 
 # Application definition
