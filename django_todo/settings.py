@@ -30,7 +30,7 @@ import dj_database_url
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-deanburke-hellodjanjo-bhqkqyz1588.ws-eu101.gitpod.io']
+ALLOWED_HOSTS = ['db1993-django-todo-app-282300a89d4b.herokuapp.com']
 
 
 # Application definition
