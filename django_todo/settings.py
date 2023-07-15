@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'django_todo.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-development = os.environ.get('DEVELOPMENT', False) 
+development = os.environ.get('DEVELOPMENT', True) 
 
 if development:
     DATABASES = {
