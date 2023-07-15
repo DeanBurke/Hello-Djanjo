@@ -80,18 +80,20 @@ WSGI_APPLICATION = 'django_todo.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-development = os.environ.get('DEVELOPMENT', True) 
+development = os.environ.get('DEVELOPMENT', False) 
 
-if development:
+if "DATABASE_URL" in os.environ:
+    print("database = db.sqlite3")
     DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
+        "default": {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": BASE_DIR / "db.sqlite3",
         }
-    }
+    }    
 else:
+    print("database = PostgreSQL via Heroku")
     DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+        'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
     }
 
 
